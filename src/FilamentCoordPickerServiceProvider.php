@@ -2,9 +2,9 @@
 
 namespace Inalto\FilamentCoordPicker;
 
+use Inalto\FilamentCoordPicker\Commands\FilamentCoordPickerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Inalto\FilamentCoordPicker\Commands\FilamentCoordPickerCommand;
 
 class FilamentCoordPickerServiceProvider extends PackageServiceProvider
 {
