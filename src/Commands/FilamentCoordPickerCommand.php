@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Inalto\FilamentCoordPicker\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentCoordPickerCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-coord-picker';
 
     public $description = 'My command';
 
