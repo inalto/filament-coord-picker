@@ -8,5 +8,4 @@ class FilamentCoordPicker
     {
         return 'inalto/filament-coord-picker';
     }
-
 }

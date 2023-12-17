@@ -2,13 +2,12 @@
 
 namespace Inalto\FilamentCoordPicker;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 //use Inalto\FilamentCoordPicker\Commands\FilamentCoordPickerCommand;
 
@@ -25,8 +24,8 @@ class FilamentCoordPickerServiceProvider extends PackageServiceProvider
             ->name('filament-coord-picker')
             ->hasConfigFile()
             ->hasViews();
-//            ->hasMigration('create_filament-coord-picker_table')
-//            ->hasCommand(FilamentCoordPickerCommand::class);
+        //            ->hasMigration('create_filament-coord-picker_table')
+        //            ->hasCommand(FilamentCoordPickerCommand::class);
     }
 
     public function packageBooted()
