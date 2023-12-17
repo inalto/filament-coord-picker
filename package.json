@@ -1,0 +1,31 @@
+{
+  "name": "filament-coord-picker",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "[![Latest Version on Packagist](https://img.shields.io/packagist/v/inalto/filament-coord-picker.svg?style=flat-square)](https://packagist.org/packages/inalto/filament-coord-picker) [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/inalto/filament-coord-picker/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/inalto/filament-coord-picker/actions?query=workflow%3Arun-tests+branch%3Amain) [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/inalto/filament-coord-picker/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/inalto/filament-coord-picker/actions?query=workflow%3A\"Fix+PHP+code+style+issues\"+branch%3Amain) [![Total Downloads](https://img.shields.io/packagist/dt/inalto/filament-coord-picker.svg?style=flat-square)](https://packagist.org/packages/inalto/filament-coord-picker)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev:styles": "npx tailwindcss -i resources/css/coord-picker.css -o dist/coord-picker.css --postcss --watch",
+    "dev:scripts": "node bin/build.js --dev",
+    "build:styles": "npx tailwindcss -i resources/css/coord-picker.css -o dist/coord-picker.css --postcss --minify && npm run purge",
+    "build:scripts": "node bin/build.js",
+    "purge": "filament-purge -i dist/coord-picker.css -o dist/coord-picker.css -v 3.x"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "esbuild": "^0.19.4",
+    "postcss": "^8.4.24",
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.3.2",
+    "@awcodes/filament-plugin-purge": "^1.1.1"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  }
+
+}

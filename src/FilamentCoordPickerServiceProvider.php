@@ -4,7 +4,13 @@ namespace Inalto\FilamentCoordPicker;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Inalto\FilamentCoordPicker\Commands\FilamentCoordPickerCommand;
+
+use Filament\Support\Assets\AlpineComponent;
+use Filament\Support\Assets\Css;
+use Filament\Support\Assets\Js;
+use Filament\Support\Facades\FilamentAsset;
+
+//use Inalto\FilamentCoordPicker\Commands\FilamentCoordPickerCommand;
 
 class FilamentCoordPickerServiceProvider extends PackageServiceProvider
 {
@@ -18,8 +24,17 @@ class FilamentCoordPickerServiceProvider extends PackageServiceProvider
         $package
             ->name('filament-coord-picker')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_filament-coord-picker_table')
-            ->hasCommand(FilamentCoordPickerCommand::class);
+            ->hasViews();
+//            ->hasMigration('create_filament-coord-picker_table')
+//            ->hasCommand(FilamentCoordPickerCommand::class);
+    }
+
+    public function packageBooted()
+    {
+        FilamentAsset::register([
+            //Js::make('flatpickr-range-plugin', __DIR__.'/../resources/assets/flatpickr/dist/plugins/rangePlugin.js'),
+            Css::make('leaflet', __DIR__.'/../dist/coord-picker.css')->loadedOnRequest(),
+            AlpineComponent::make('coord-picker', __DIR__.'/../dist/coord-picker.js')->loadedOnRequest(),
+        ], package: FilamentCoordPicker::getPackageName());
     }
 }
