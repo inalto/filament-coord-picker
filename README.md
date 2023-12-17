@@ -5,15 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/inalto/filament-coord-picker/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/inalto/filament-coord-picker/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/inalto/filament-coord-picker.svg?style=flat-square)](https://packagist.org/packages/inalto/filament-coord-picker)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/filament-coord-picker.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/filament-coord-picker)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+The Coordinate Picker Field is an interactive and user-friendly component for FilamentPHP forms, allowing users to precisely select geographical coordinates. This field integrates a dynamic map interface, where users can pinpoint a location by either entering an address or manually navigating and clicking on the map. Upon selection, the field automatically captures and fills in the latitude and longitude coordinates.
 
 ## Installation
 
@@ -52,8 +44,8 @@ php artisan vendor:publish --tag="filament-coord-picker-views"
 ## Usage
 
 ```php
-$filamentCoordPicker = new Inalto\FilamentCoordPicker();
-echo $filamentCoordPicker->echoPhrase('Hello, Inalto!');
+$filamentCoordPicker = new inalto\FilamentCoordPicker();
+
 ```
 
 ## Testing
@@ -62,17 +54,24 @@ echo $filamentCoordPicker->echoPhrase('Hello, Inalto!');
 composer test
 ```
 
-## Changelog
+## 🙏 Big Thanks to 🙏
+- Leaflet | http://leafletjs.com
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+## 🤑 Support Us 🤑
 
-## Contributing
+These codes make your life easier and you avoid wasting time?\
+Give us some RedBull!
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+USDT(BEP20)\
+0x367B9207ACBC30022F9A7262320E36661D7Ffeb5
 
-## Security Vulnerabilities
+## ✉️ Contact Us ✉️ 
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+Do you have any suggestions?\
+Do you need to customise this plugin?
+
+Mail: webmaster@inalto.com\
+Telegram: @inaltoDev
 
 ## Credits
 
