@@ -6,7 +6,6 @@ use Filament\Forms\Components\Concerns\HasAffixes;
 use Filament\Forms\Components\Concerns\HasExtraInputAttributes;
 use Filament\Forms\Components\Concerns\HasPlaceholder;
 use Filament\Forms\Components\Field;
-use Inalto\FilamentCoordPicker\Enums\CoordPickerTheme;
 
 class CoordPicker extends Field
 {
@@ -20,7 +19,6 @@ class CoordPicker extends Field
 
     protected array $config = [];
 
-    protected CoordPickerTheme $theme = CoordPickerTheme::DEFAULT;
 
     public function getConfig(): array
     {
@@ -29,27 +27,10 @@ class CoordPicker extends Field
         return $config;
     }
 
-    public function getTheme(): string
-    {
-        return $this->theme?->value;
-    }
-
     public function getThemeAsset(): string
     {
-        if ($this->getTheme() === CoordPickerTheme::DEFAULT->value) {
-            //        $this->theme(CoordPickerTheme::LIGHT);
-        }
-
-        return asset('css/'.static::PACKAGE_NAME.'/coordpicker-'.$this->getTheme().'-theme.css');
+        return asset('css/'.static::PACKAGE_NAME.'/coordpicker.css');
     }
 
-    public function getDarkThemeAsset(): string
-    {
-        return asset('css/'.static::PACKAGE_NAME.'/coordpicker-dark-theme.css');
-    }
 
-    public function getLightThemeAsset(): string
-    {
-        return asset('css/'.static::PACKAGE_NAME.'/coordpicker-light-theme.css');
-    }
 }
