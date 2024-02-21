@@ -8,8 +8,6 @@ use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Inalto\FilamentCoordPicker\Commands\FilamentCoordPickerCommand;
 use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 //use Inalto\FilamentCoordPicker\Commands\FilamentCoordPickerCommand;
