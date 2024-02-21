@@ -1,7 +1,7 @@
 <?php
+
 namespace Inalto\FilamentCoordPicker\Forms\Components;
 
-use Closure;
 use Filament\Forms\Components\Concerns\HasAffixes;
 use Filament\Forms\Components\Concerns\HasExtraInputAttributes;
 use Filament\Forms\Components\Concerns\HasPlaceholder;
@@ -10,22 +10,17 @@ use Inalto\FilamentCoordPicker\Enums\CoordPickerTheme;
 
 class CoordPicker extends Field
 {
-
-    use HasPlaceholder,
-    HasAffixes,
-    HasExtraInputAttributes;
+    use HasAffixes,
+        HasExtraInputAttributes,
+        HasPlaceholder;
 
     const PACKAGE_NAME = 'inalto/filament-coord-picker';
 
     protected string $view = 'filament-coord-picker::forms.components.coord-picker';
 
     protected array $config = [];
+
     protected CoordPickerTheme $theme = CoordPickerTheme::DEFAULT;
-
-
-
-
-
 
     public function getConfig(): array
     {
@@ -33,9 +28,6 @@ class CoordPicker extends Field
 
         return $config;
     }
-
-
-
 
     public function getTheme(): string
     {
@@ -45,7 +37,7 @@ class CoordPicker extends Field
     public function getThemeAsset(): string
     {
         if ($this->getTheme() === CoordPickerTheme::DEFAULT->value) {
-    //        $this->theme(CoordPickerTheme::LIGHT);
+            //        $this->theme(CoordPickerTheme::LIGHT);
         }
 
         return asset('css/'.static::PACKAGE_NAME.'/coordpicker-'.$this->getTheme().'-theme.css');
