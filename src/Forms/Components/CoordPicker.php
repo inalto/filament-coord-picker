@@ -19,7 +19,6 @@ class CoordPicker extends Field
 
     protected array $config = [];
 
-
     public function getConfig(): array
     {
         $config = [];
@@ -31,6 +30,4 @@ class CoordPicker extends Field
     {
         return asset('css/'.static::PACKAGE_NAME.'/coordpicker.css');
     }
-
-
 }
