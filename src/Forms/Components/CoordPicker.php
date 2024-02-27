@@ -23,7 +23,7 @@ class CoordPicker extends Field
     {
         return $this->theme?->value;
     }
-    
+
     public function getConfig(): array
     {
         $config = [];
