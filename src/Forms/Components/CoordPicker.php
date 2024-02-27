@@ -19,6 +19,11 @@ class CoordPicker extends Field
 
     protected array $config = [];
 
+    public function getTheme(): string
+    {
+        return $this->theme?->value;
+    }
+    
     public function getConfig(): array
     {
         $config = [];
