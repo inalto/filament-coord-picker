@@ -19,8 +19,9 @@ class CoordPicker extends Field
 
     protected array $config = [];
 
-    protected string $theme = 'default';
-    
+    protected CoordPickerTheme $theme = CoordPickerTheme::DEFAULT;
+
+
     public function getTheme(): string
     {
         return 'default';
@@ -34,6 +35,16 @@ class CoordPicker extends Field
     }
 
     public function getThemeAsset(): string
+    {
+        return asset('css/'.static::PACKAGE_NAME.'/coordpicker.css');
+    }
+
+    public function getDarkThemeAsset(): string
+    {
+        return asset('css/'.static::PACKAGE_NAME.'/coordpicker.css');
+    }
+
+    public function getLightThemeAsset(): string
     {
         return asset('css/'.static::PACKAGE_NAME.'/coordpicker.css');
     }
