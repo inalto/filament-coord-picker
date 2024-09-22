@@ -22,7 +22,6 @@ class CoordPicker extends Field
 
     protected CoordPickerTheme $theme = CoordPickerTheme::DEFAULT;
 
-
     public function getTheme(): string
     {
         return 'default';
