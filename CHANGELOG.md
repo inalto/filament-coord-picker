@@ -2,6 +2,10 @@
 
 All notable changes to `filament-coord-picker` will be documented in this file.
 
+## v1.0.11 - 2024-12-16
+
+set the maxZoom to 17 to avoid gray tiles
+
 ## v1.0.10 - 2024-09-22
 
 updates
