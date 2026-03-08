@@ -29,9 +29,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <div
         wire:ignore
-        ax-load
-        ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('coord-picker', package: \Inalto\FilamentCoordPicker\FilamentCoordPicker::getPackageName()) }}"
-        x-load-css="[@js(\Filament\Support\Facades\FilamentAsset::getStyleHref('leaflet', \Inalto\FilamentCoordPicker\FilamentCoordPicker::getPackageName()))]"
+        x-load
+        x-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('coord-picker', 'inalto/filament-coord-picker') }}"
         x-data="coordPicker({
                 state: $wire.{{ $applyStateBindingModifiers("entangle('{$getStatePath()}')") }}
                 })" class="relative">

@@ -21,15 +21,22 @@ class FilamentCoordPickerServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('filament-coord-picker')
-            ->hasConfigFile()
-            ->hasViews();
+            ->hasConfigFile();
+    }
+
+    public function boot()
+    {
+        parent::boot();
+        
+        // Register the view namespace explicitly
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'filament-coord-picker');
     }
 
     public function packageBooted()
     {
         FilamentAsset::register([
-            Css::make('leaflet', __DIR__.'/../dist/coord-picker.css')->loadedOnRequest(),
-            AlpineComponent::make('coord-picker', __DIR__.'/../dist/coord-picker.js')->loadedOnRequest(),
-        ], package: FilamentCoordPicker::getPackageName());
+            Css::make('coord-picker-styles', __DIR__.'/../dist/coord-picker.css'),
+            AlpineComponent::make('coord-picker', __DIR__.'/../dist/coord-picker.js'),
+        ], package: 'inalto/filament-coord-picker');
     }
 }
