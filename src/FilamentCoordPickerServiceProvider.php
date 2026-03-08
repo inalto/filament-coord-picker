@@ -8,7 +8,7 @@ use Filament\Support\Facades\FilamentAsset;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-//use Inalto\FilamentCoordPicker\Commands\FilamentCoordPickerCommand;
+// use Inalto\FilamentCoordPicker\Commands\FilamentCoordPickerCommand;
 
 class FilamentCoordPickerServiceProvider extends PackageServiceProvider
 {
@@ -27,7 +27,7 @@ class FilamentCoordPickerServiceProvider extends PackageServiceProvider
     public function boot()
     {
         parent::boot();
-        
+
         // Register the view namespace explicitly
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'filament-coord-picker');
     }
